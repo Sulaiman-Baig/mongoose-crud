@@ -8,19 +8,19 @@ var db = 'mongodb+srv://user:cruduser@cluster0.u9l50pz.mongodb.net/?retryWrites=
 var books = require('./routes/books');
 
 mongoose.connect(db)
-    .then((connected) => {
-        console.log(`connected to mongodb`);
-        app.use(bodyParser.json());
-        app.use(bodyParser.urlencoded({
-            extended: true
-        }));
+// .then((connected) => {
+//     console.log(`connected to mongodb`);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-        app.use('/books', books);
+app.use('/books', books);
 
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
 
 
 
