@@ -7,7 +7,7 @@ var db = 'mongodb+srv://user:cruduser@cluster0.u9l50pz.mongodb.net/?retryWrites=
 
 var books = require('./routes/books');
 
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose.connect(db)
 // .then((connected) => {
 //     console.log(`connected to mongodb`);
 app.use(bodyParser.json());
